@@ -47,22 +47,14 @@ Comments:Control ATV4/4K with Jailbreak
   DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
   (Uncomment and declare inputs and outputs as needed)
 *******************************************************************************************/
-DIGITAL_INPUT AUp,ADown,ALeft,ARight,AOk,AMenu,APlay;
+DIGITAL_INPUT AUp,ADown,ALeft,ARight,AOk,AMenu,APlay,InputEntry;
 // ANALOG_INPUT 
-// STRING_INPUT fromUser[20];
+STRING_INPUT UserInput[150];
 // BUFFER_INPUT 
 
 // DIGITAL_OUTPUT 
 // ANALOG_OUTPUT 
 STRING_OUTPUT TX$; 
-
-/*******************************************************************************************
-  SOCKETS
-  (Uncomment and define socket definitions as needed)
-*******************************************************************************************/
-// TCP_CLIENT
-// TCP_SERVER
-// UDP_SOCKET
 
 /*******************************************************************************************
   Parameters
@@ -158,7 +150,6 @@ String_Function MyStrFunction1()
   Event Handlers
   (Uncomment and declare additional event handlers as needed)
 *******************************************************************************************/
-//makestring(out, "GET /enterText=%s\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n",  fromUser);
 PUSH AUp{
 	makestring(TX$,"GET /remoteCommand=up\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
@@ -180,6 +171,10 @@ PUSH AMenu{
 PUSH APlay{
 	makestring(TX$,"GET /remoteCommand=play\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
+PUSH InputEntry{
+	makestring(TX$, "GET /enterText=%s\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A", UserInput);		
+}
+
 
 
 /*
