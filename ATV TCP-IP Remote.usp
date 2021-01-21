@@ -160,25 +160,25 @@ String_Function MyStrFunction1()
 *******************************************************************************************/
 //makestring(out, "GET /enterText=%s\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n",  fromUser);
 PUSH AUp{
-	makestring(TX$,"GET /enterText=up\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=up\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 PUSH ADown{
-	makestring(TX$,"GET /enterText=down\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=down\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 PUSH ALeft{
-	makestring(TX$,"GET /enterText=left\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=left\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 PUSH ARight{
-	makestring(TX$,"GET /enterText=right\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=right\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 PUSH AOk{
-	makestring(TX$,"GET /enterText=select\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=select\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 PUSH AMenu{
-	makestring(TX$,"GET /enterText=menu\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=menu\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 PUSH APlay{
-	makestring(TX$,"GET /enterText=play\\n HTTP/1.0\\nHost: http://living-room.local:3073\\n\\n");		
+	makestring(TX$,"GET /remoteCommand=play\x0D\x0A HTTP/1.0\x0D\x0AHost: http://living-room.local:3073\x0D\x0A\x0D\x0A");		
 }
 
 
