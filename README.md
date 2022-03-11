@@ -1,4 +1,3 @@
 # Crestron-Apple-TV-Jailbreak-Remote
 
-Note: A jailbreak is needed for this to work!
-In addition, AirMagic is needed from the NitoTV to make it work.
+Have you ever wondered if you can control an Apple TV through other devices through IP (Without utilizing HomeKit); well, here is a way using a jailbroken tweak called AirMagic by NitoTV.
